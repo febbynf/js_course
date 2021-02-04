@@ -25,3 +25,31 @@ for(let num = 0; num < 10; num++) {
     emptyArray.push(num);
 }
 console.log(emptyArray)
+
+let mahasiswa = {
+    first_name: 'febby', 
+    last_name: 'nurfitriyani',
+    dataInfo: function() {
+        return this.first_name + ' ' + this.last_name
+    }
+};
+
+console.log(mahasiswa.dataInfo())
+var age = prompt('what is your age?');
+if ((age >= 18) && (age <= 35)) {
+    status = 'true';
+} else {
+    status = 'false';
+}
+
+console.log(status)
+
+switch (6) {
+    case 0:
+        text = 'weekend'
+    case 5:
+        text = 'weekend'
+    case 6:
+        text = 'weekday'
+}
+console.log(text)
