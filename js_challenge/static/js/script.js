@@ -1,3 +1,4 @@
+// challenge 1
 function ageInDays() {
     var age = prompt('What year were you born?');
     var ageInDays1 = (2021 - age) * 365;
@@ -11,4 +12,12 @@ function ageInDays() {
 
 function reset() {
     document.getElementById('ageInDays').remove();
+}
+
+//challenge 2
+function generateCat() {
+    var img = document.createElement('img');
+    var div = document.getElementById('flex-cat-gen');
+    img.src = "http://thecatapi.com/api/images/get?format=src&type=gif&size=small";
+    div.appendChild(img);
 }
