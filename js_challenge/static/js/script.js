@@ -21,3 +21,20 @@ function generateCat() {
     img.src = "http://thecatapi.com/api/images/get?format=src&type=gif&size=small";
     div.appendChild(img);
 }
+
+// challenge 3
+function rpsGame(yourChoice) {
+    console.log(yourChoice);
+    var humanChoice, botChoice;
+    
+    botChoice = numberToChoice(randomRps());
+    console.log(botChoice);
+}
+
+function randomRps() {
+    return Math.floor(Math.random() * 3);
+}
+
+function numberToChoice(number) {
+    return ['rock', 'paper', 'scissors'][number];
+}
