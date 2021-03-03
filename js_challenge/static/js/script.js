@@ -96,3 +96,15 @@ function rpsFrontEnd(humanImageChoice, botImageChoice, finalMessage) {
     document.getElementById('flex-box-rps-div').appendChild(messageDiv);
     document.getElementById('flex-box-rps-div').appendChild(botDiv);
 }
+
+// Challenge 4: Change the Color of All Buttons
+var all_buttons = document.getElementsByTagName('button');
+
+var copyAllButtons = [];
+for (let i=0;i < all_buttons.length; i++) {
+    copyAllButtons.push(all_buttons[i].classList[1]);
+}
+
+function buttonColorChange(value) {
+    console.log()
+}
