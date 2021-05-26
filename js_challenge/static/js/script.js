@@ -101,10 +101,16 @@ function rpsFrontEnd(humanImageChoice, botImageChoice, finalMessage) {
 var all_buttons = document.getElementsByTagName('button');
 
 var copyAllButtons = [];
-for (let i=0;i < all_buttons.length; i++) {
+for (let i=0; i < all_buttons.length; i++) 
     copyAllButtons.push(all_buttons[i].classList[1]);
 }
 
-function buttonColorChange(value) {
-    console.log()
+function buttonColorChange(buttonThingy) {
+    if (buttonThingy.value === 'red') {
+        buttonsRed();
+    } else if (buttonThingy.value === 'green') {
+        buttonsGreen();
+    } else if (buttonThingy.value === 'reset') {
+        buttons
+    }
 }
