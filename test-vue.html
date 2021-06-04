@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Belajar Vue.JS</title>
+</head>
+<body>
+    <div id="vueApp">
+        <input type="text" v-model="subject">
+        <h3>Belajar {{ subject }}</h3>
+
+        <ol v-if="status">
+            <li v-for="data in subjects">
+                {{ data.title }} - Type - {{ data.type }}
+            </li>
+        </ol>
+
+        <button v-on:click="makeItFun()">Make it Fun</button>
+        <button v-on:click="check()">Check Subject</button>
+
+        <p>Nilai {{ score }}</p>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const sample = {
+            data() {
+                return {
+                    subject: 'VueJS',
+                    score: 0,
+                    subjects: [
+                        { title: 'JavaScript', type: 'Native' },
+                        { title: 'Vue', type: 'Framework'},
+                        { title: 'React', type: 'Framework'},
+                    ]
+                }
+            }, 
+            methods: {
+                makeItFun() {
+                    this.subject = this.subject + " !!!"
+                },
+                check() {
+                    if(this.subject === 'Vues')
+                        this.score = 100
+                    else
+                        this.score = 50
+                }
+            }
+        }
+        Vue.createApp(sample).mount('#vueApp')
+    </script>
+
+</body>
+</html>
